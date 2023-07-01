@@ -1,7 +1,8 @@
 export default class Currency {
   constructor(code, name) {
-    this._code = this.validateString(code);
-    this._name = this.validateString(name);
+	  if (typeof name !== 'string' || typeof code !== 'string') { throw new Error(); }
+    this._code = code;
+    this._name = name;
   }
 
   // get code
@@ -11,7 +12,7 @@ export default class Currency {
 
   // set code
   set code(newCode) {
-    this._code = this.validateString(newCode);
+    this._code = newCode;
   }
 
   // get name
@@ -21,15 +22,7 @@ export default class Currency {
 
   // set name
   set name(newName) {
-    this._name = this.validateString(newName);
-  }
-
-  // eslint-disable-next-line
-  validateString(value) {
-    if (typeof value !== 'string') {
-      return new TypeError();
-    }
-    return value;
+    this._name = newName;
   }
 
   displayFullCurrency() {
