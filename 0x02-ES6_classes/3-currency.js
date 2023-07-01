@@ -5,22 +5,22 @@ export default class Currency {
   }
 
   // get code
-  get code() {
+  getCode() {
     return this._code;
   }
 
   // set code
-  set code(newCode) {
+  setCode(newCode) {
     this._code = newCode;
   }
 
   // get name
-  get name() {
+  getName() {
     return this._name;
   }
 
   // set name
-  set name(newName) {
+  setName(newName) {
     this._name = newName;
   }
 
