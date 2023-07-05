@@ -13,7 +13,7 @@ interface Directors extends Teacher {
 
 
 
-function printTeacher(firstName, lastName) {
+function printTeacher(firstName, lastName): string {
 	return `${firstName[0]}. ${lastName}`;
 }
 
