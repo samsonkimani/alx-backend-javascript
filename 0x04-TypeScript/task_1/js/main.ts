@@ -13,21 +13,21 @@ interface Directors extends Teacher {
 
 
 
-function printTeacher(firstName, lastName): string {
+function printTeacher(firstName: string, lastName:): string {
 	return `${firstName[0]}. ${lastName}`;
 }
 
-interface StudentClassInterface {
-	new (firstName: string , lastName: string): StudentClass;
-}
 
-interface StudentClass {
+
+interface Student {
+	firstName: string;
+	lastName: string;
 	workOnHomeWork(): string;
 	displayName(): string;
 }
 
-class StudentClass {
-	constructor(private firstName: string, private lastName: string) {}
+class StudentClass implements Student {
+	constructor(public firstName: string, public lastName: string) {}
 
 	workOnHomeWork() : string {
 		return "Currently working";
