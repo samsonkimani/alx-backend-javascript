@@ -1,0 +1,17 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "writting testcases in nodejs using mocha, chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 0-calcul.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0"
+  }
+}
